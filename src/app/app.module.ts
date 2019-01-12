@@ -1,14 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
-
+import { FormsModule } from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent
   ],
+  schemas: [ 
+    CUSTOM_ELEMENTS_SCHEMA 
+  ],
   imports: [
-    BrowserModule
+    FormsModule,
+    BrowserModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
