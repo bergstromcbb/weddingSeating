@@ -1,7 +1,8 @@
 <div class="container">
-  <div class="row mt-5">
+  <div class="row logospacing">
     <div class="col-md-12 text-center">
-      <h1 class="h1-responsive">MDB Todo App:</h1>
+        <img src="../assets/images/FlowerBouquet2.png" class="weddinglogo">
+      <h1 class="h1-responsive title">Amy and Dani's Wedding Seating Chart:</h1>
     </div>
   </div>
   <div class="row mt-5 ">
@@ -13,7 +14,7 @@
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <form>
-            <input mdbActive type="text" placeholder="Add new category" id="form1" class="form-control" [(ngModel)]="newCategory.name"
+            <input mdbActive type="text" placeholder="Add new table" id="form1" class="form-control" [(ngModel)]="newCategory.name"
               (keyup.enter)="addCategory()" name="addCat">
           </form>
           <span class="badge primary-color badge-pill">
@@ -34,7 +35,7 @@
         <div class="form-group full-width" *ngIf="todosForCat.length > 0">
           <form class="full-width">
             <div *ngFor="let todo of todosForCat">
-              <input type="checkbox" id="{{todo.id}}" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
+              <!-- <input id="{{todo.id}}" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"> -->
               <label for="{{todo.id}}" [ngClass]="{'strikethrough' : todo.complete}">{{todo.title}}</label>
               <button type="button" class="close" aria-label="Close" style="float: right;" (click)="removeTodo(todo)">
                 <span aria-hidden="true" >&times;</span>
@@ -50,16 +51,17 @@
             <a class="prefix">
               <i class="fa fa-plus prefix" (click)="addTodo()"></i>
             </a>
-            <input mdbActive type="text" id="form2" class="form-control" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()" name="addNew">
-            <label for="form2">Add new task</label>
+            <input mdbInputDirective type="text" id="form2" class="form-control" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()" name="addNew" [mdbValidate]="false">
+            <label for="form2">Add new guest name</label>
           </form>
         </div>
       </div>
     </div>
     <ng-template #elseBlock>
       <div class="col-md-5 test 5 list text-center">
-        <h5 class="pt-3">Choose category from menu in the left.</h5>
-        <p class="pt-5">You can also create a new category by typing the name and pressing the enter or clicking on the
+        <h5 class="pt-3">Choose table number from <br/>the list in the left.</h5>
+        <p class="pt-5">You can also create a new table by <br/>typing 
+           number/nickname and pressing the <br/>enter or clicking on the
           <span class="badge primary-color badge-pill">
             <i class="fa fa-plus" aria-hidden="true"></i>
           </span>

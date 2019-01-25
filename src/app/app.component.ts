@@ -81,23 +81,37 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     let initCat = new Category();
-    initCat = {'name' : 'Today', 'id' : 1 , };
+    initCat = {'name' : 'Table 1', 'id' : 1 , };
     this.addInitialCategory(initCat);
-    initCat = {'name' : 'Tomorrow', 'id' : 2 , };
+    initCat = {'name' : 'Table 2', 'id' : 2 , };
     this.addInitialCategory(initCat);
-    initCat = {'name' : 'Work', 'id' : 3 , };
+    initCat = {'name' : 'Table 3', 'id' : 3 , };
     this.addInitialCategory(initCat);
-    initCat = {'name' : 'Holidays', 'id' : 4 , };
+    initCat = {'name' : 'Table 4', 'id' : 4 , };
     this.addInitialCategory(initCat);
-    initCat = {'name' : 'Shopping list', 'id' : 5 , };
+    initCat = {'name' : 'Table 5', 'id' : 5 , };
     this.addInitialCategory(initCat);
 
     let initTodo = new Todo();
-    initTodo = {'title' : 'Task1', 'complete': false, 'id' : 1 , category: 1 };
+    initTodo = {'title' : 'Jenelle Austin', 'complete': false, 'id' : 1 , category: 1 };
     this.addInitialTodo(initTodo);
-    initTodo = {'title' : 'Task2', 'complete': true, 'id' : 2 , category: 2 };
+    initTodo = {'title' : 'Kim Stagg', 'complete': false, 'id' : 2 , category: 2 };
     this.addInitialTodo(initTodo);
-    initTodo = {'title' : 'Task3', 'complete': true, 'id' : 3 , category: 1 };
+    initTodo = {'title' : 'Amy Moore', 'complete': false, 'id' : 3 , category: 1 };
+    this.addInitialTodo(initTodo);
+    initTodo = {'title' : 'Amy Wilkins', 'complete': false, 'id' : 4 , category: 1 };
+    this.addInitialTodo(initTodo);
+    initTodo = {'title' : 'Jessica Roland', 'complete': false, 'id' : 5 , category: 1 };
+    this.addInitialTodo(initTodo);
+        initTodo = {'title' : 'James Rea', 'complete': false, 'id' : 6 , category: 2 };
+    this.addInitialTodo(initTodo);
+        initTodo = {'title' : 'Casey Ramotowski', 'complete': false, 'id' : 7 , category: 3 };
+    this.addInitialTodo(initTodo);
+        initTodo = {'title' : 'Rachael Feher', 'complete': false, 'id' : 8 , category: 3 };
+    this.addInitialTodo(initTodo);
+        initTodo = {'title' : 'Amanda Grieshop', 'complete': false, 'id' : 9 , category: 3 };
+    this.addInitialTodo(initTodo);
+        initTodo = {'title' : 'Ellen Mey', 'complete': false, 'id' : 10 , category: 3 };
     this.addInitialTodo(initTodo);
   }
 

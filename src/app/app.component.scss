@@ -1,7 +1,20 @@
 .list {
-    border: 1px solid rgba(0, 0, 0, 0.125);
+    // border: 1px solid rgba(0, 0, 0, 0.125);
     margin-left: 15px;
     margin-right: 15px;
+}
+
+.title {
+    font-family: 'Sacramento', cursive;
+}
+
+.logospacing {
+    margin-top: -60px;
+}
+
+.weddinglogo {
+    width: 50%;
+    z-index: -5;
 }
 
 .strikethrough {
